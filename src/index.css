@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sofia+Sans+Condensed:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    @font-face {
+        font-family: "Sahel";
+        src:local("Sahel"), url("./assets/sahel-font/Sahel.woff") format("woff");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Sahel bold";
+        src:local("Sahel"), url("./assets/sahel-font/Farsi-Digits/Sahel-Bold-FD.woff") format("woff");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Sahel black";
+        src:local("Sahel"), url("./assets/sahel-font/Farsi-Digits/Sahel-Black-FD.woff") format("woff");
+        font-display: swap;
+    }
+}
+
+/* body {
+    background-image: url("./assets/headerBgDesktop.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+ .circle{
+    @apply  flex items-center justify-center border  rounded-full
+ }
+ .circle--main {
+    @apply absolute bottom-0 left-0 right-0 mx-auto translate-y-2/4 hidden md:flex
+
+ }
+ .circle--lg{
+    @apply w-[203px] h-[203px] border-white/25
+ }
+ .circle--md{
+    @apply w-[145px] h-[145px] border-white/50
+
+ }
+ .circle--sm{
+    @apply w-[95px] h-[95px] border-white/80
+ }
+ @media screen and (min-width:1280px){
+
+    html.dark .products{
+        background-image: url("./assets/products-bg.png");
+     }
+     .products{
+        background:linear-gradient(rgba(243, 244, 246, 0.281),rgba(243, 244, 246, 0.65)), url("./assets/products-bg.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 900px;
+        
+     }
+ }
